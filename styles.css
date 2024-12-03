@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #004aad, #ffffff); /* Deep Blue Sky to White */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(to bottom, #004aad, #cce7ff); /* Deep blue to light blue */
+    padding: 50px 20px;
+    text-align: center;
+    color: #fff; /* White text for header */
+}
+
+.header .headline {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff; /* Pure white */
+    margin-bottom: 20px;
+}
+
+.header .subheadline {
+    font-size: 1.2rem;
+    color: #e0f0ff; /* Light blue text */
+    margin-bottom: 30px;
+}
+
+.header .cta-button {
+    background: linear-gradient(90deg, #1e90ff, #4682b4); /* Sky blue to steel blue */
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.header .cta-button:hover {
+    background: linear-gradient(90deg, #4682b4, #1e90ff);
+}
+
+/* Main Content Section */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.video-section, .offer-section {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+}
+
+.video-section h2, .offer-section h2 {
+    color: #004aad; /* Deep blue */
+    margin-bottom: 20px;
+}
+
+/* Video Thumbnail */
+.video-thumbnail {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.8); /* Dark play icon */
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* White shadow */
+    pointer-events: none;
+}
+
+.video-thumbnail:hover .play-icon {
+    color: #004aad; /* Deep blue on hover */
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Offer Section */
+.offer-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.offer-section ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 25px;
+    color: #004aad; /* Deep blue text */
+}
+
+.offer-section ul li::before {
+    content: "✔";
+    color: #1e90ff; /* Sky blue checkmark */
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #1e90ff, #4682b4);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #4682b4, #1e90ff);
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to top, #ffffff, #cce7ff); /* White to light blue */
+    font-size: 0.9rem;
+    color: #333; /* Dark text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-section, .offer-section {
+        width: 90%;
+    }
+}
